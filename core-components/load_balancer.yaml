@@ -60,16 +60,16 @@ Resources:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
       DefaultActions:
-          - Type: "fixed-response"
-            FixedResponseConfig:
-              ContentType: "text/plain"
-              MessageBody: "Unknown Host"
-              StatusCode: "503"
+        - Type: fixed-response
+          FixedResponseConfig:
+            ContentType: text/plain
+            MessageBody: "Unknown Host"
+            StatusCode: "503"
       LoadBalancerArn: !Ref LoadBalancer
       Port: !Ref LoadBalancerPort
       Protocol: HTTPS
       Certificates:
-        - CertificateArn: !Ref Certificate
+        - CertificateArn: !Ref CertificateArn
 
 
   ListenerHTTP:
