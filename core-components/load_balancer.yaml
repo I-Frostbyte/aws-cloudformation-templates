@@ -71,13 +71,6 @@ Resources:
       Certificates:
         - CertificateArn: !Ref Certificate
 
-      LoadBalancerArn: !Ref LoadBalancer
-      Port: !Ref LoadBalancerPort
-      Protocol: HTTPS
-      Certificates:
-        - CertificateArn: !Ref CertificateArn
-
-
 
   ListenerHTTP:
     Type: "AWS::ElasticLoadBalancingV2::Listener"
